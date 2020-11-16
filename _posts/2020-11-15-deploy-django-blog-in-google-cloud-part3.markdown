@@ -33,7 +33,10 @@ At the moment only chloe-django-blog.nw.r.appspot.com is updated when I deploy t
 ```
 target url:      [https://chloe-django-blog.nw.r.appspot.com]
 ```
-Actually it is well updated, I only needed to add `chloe-django-blog.appspot.com` to the `ALLOWED_HOSTS` in settings.py
+Actually it is well updated, I only needed to add `chloe-django-blog.appspot.com` to the `ALLOWED_HOSTS` in settings.py, or change the line to:
+```python
+ALLOWED_HOSTS = ['127.0.0.1','.pythonanywhere.com', '.appspot.com']
+```
 
 ## TO BE CONTINUED
 Deploying from Github will be the next step and I will change this post accordingly.

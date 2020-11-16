@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Create Django blog"
+title:  "Create Django blog and deployment on PythonAnywhere"
 date:   2020-11-15 16:15:00 +0100
-categories: django python
+categories: django python pythonanywhere
 ---
 
 I simply followed [Django girls tutorial][django-girls]. 
@@ -18,6 +18,11 @@ The main current issue is that the free account for pythonanywhere does not allo
 The website works on my local environment but the option to look for species information raises an exception when the website is deployed on PythonAnywhere
 
 The next step is deploying the app on Google Cloud, to work around this issue and learn about a new tool. My Google Cloud experience is described in a next article. 
+
+## Edit: my app runs on pythonanywhere now
+
+Giles from the support team at pythonanywhere added pykew to the API whitelist and now the app works fine. 
+I have not uploaded the latest version of the app that communicates with Google Cloud SQl, because that would mean pushing passwords in Github.
 
 [pythonanywhere]:https://pythonanywhere.com
 [pykew]:https://pypi.org/project/pykew/

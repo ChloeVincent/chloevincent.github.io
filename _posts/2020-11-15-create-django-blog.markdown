@@ -24,6 +24,26 @@ The next step is deploying the app on Google Cloud, to work around this issue an
 Giles from the support team at pythonanywhere added pykew to the API whitelist and now the app works fine. 
 I have not uploaded the latest version of the app that communicates with Google Cloud SQl, because that would mean pushing passwords in Github.
 
+## Reminder on how to launch the app
+First I need to launch the virtual environment:
+```sh
+source myvenv/bin/activate
+```
+
+Then run the server with: 
+```sh
+python manage.py runserver
+```
+(no need to use python3 when running it in the virtual environment)
+
+Since my SQL database in now on Google Cloud, I also need to start the proxy (see following posts for more info):
+```sh
+./cloud_sql_proxy -instances=<INSTANCE_CONNECTION_NAME>=tcp:3306
+```
+`INSTANCE_CONNECTION_NAME` is `PROJECT_NAME:REGION_CODE:INSTANCE_NAME`
+
+
+
 [pythonanywhere]:https://pythonanywhere.com
 [pykew]:https://pypi.org/project/pykew/
 [django-girls]:https://tutorial.djangogirls.org/en/

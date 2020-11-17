@@ -24,9 +24,9 @@ INSTALLED_APPS = [
 ```
 
 And finally, wherever I use the text from my posts, I need to load the `markdown_deux_tags` after the 'extends' and add the tag `markdown`:
-```html
-{% extends 'blog/base.html' %}
-{% load markdown_deux_tags %}
+```
+{ % extends 'blog/base.html' % }
+{ % load markdown_deux_tags % }
 
 ...
 
@@ -34,8 +34,6 @@ And finally, wherever I use the text from my posts, I need to load the `markdown
 
 
 ```
-
-
 
 [mywebsite]:https://chloe-django-blog.appspot.com/
 [myregional-website]:https://chloe-django-blog.nw.r.appspot.com/

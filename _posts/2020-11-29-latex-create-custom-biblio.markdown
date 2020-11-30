@@ -45,6 +45,14 @@ And at the end of my document, where I want my bibliography to appear, I add:
 ```
 (instead of `\printbibliography`, where `MAling` is the bst file previously created and `<fullPathToBiblio>` is the full path to where my .bib file is located)
 
+
+## Citing references
+To get the desired output in the text body, I used `\citet` which outputs "Author (year)" and a new command `\ctp` (for CiteT Parenthesis):
+```latex
+\newcommand{\ctp}[1]{(\citealt{#1})} % outputs "(Author year)"
+```
+
+
 ## Installing the style for further use
 I have not tried this, since the style I created was a one time thing. But this might be useful for later. ([source][install-style])
 ```sh

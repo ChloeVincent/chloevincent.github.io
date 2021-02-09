@@ -5,9 +5,16 @@ date:   2021-02-08 19:00:00 +0100
 categories: golang calendar http
 ---
 
-When working on a go project, I need to run the following command to avoid errors about not finding the packages: `export GOPATH=<working directory>`.
-
 The working app is available on [my GitHub page][github]. I detail here the different part I needed to create the app. It might evolve in the future but the main parts are present.
+
+# Notes on building the app
+First set `GOPATH` to the working directory (for the terminal session) by running the following command to avoid errors about not finding the packages: `export GOPATH=<working directory>`.
+
+To run the app locally, use `go run appli.go`.
+
+To build an executable use `go build appli.go`. 
+The app will then be available with `./appli`.
+For multiple platforms see [this tutoria][tuto-multiple-platforms].
 
 # Intro: main()
 I first start the Google calendar service. 
@@ -537,6 +544,7 @@ func refreshOccupiedDaysList() (map[int][]OccupiedDay, []string) {
 
 
 
+
 [github]: https://github.com/ChloeVincent/CalendrierToulonApp
 [calendar-doc]: https://developers.google.com/calendar/quickstart/go
 [so-stopHttp]: https://stackoverflow.com/questions/39320025/how-to-stop-http-listenandserve
@@ -544,3 +552,4 @@ func refreshOccupiedDaysList() (map[int][]OccupiedDay, []string) {
 [http-doc]: https://golang.org/pkg/net/http/
 [bufio-doc]: https://golang.org/pkg/bufio/
 [template-doc]: https://golang.org/pkg/text/template/
+[tuto-multiple-platforms]: https://www.digitalocean.com/community/tutorials/how-to-build-go-executables-for-multiple-platforms-on-ubuntu-16-04

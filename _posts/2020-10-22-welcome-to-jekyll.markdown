@@ -24,6 +24,50 @@ print_hi('Tom')
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
+# Edit for tips and tricks
+
+#### Building site locally for testing
+To build your site locally for testing, you will need to run `bundle exec jekyll serve`. 
+The blog will be accessible at [localhost:4000][local-address].
+
+#### Collapsible code snippets
+It is supposedly very easy to add collapsible sections in markdown according to [this page][collapsible-markdown]. 
+However, in my case, it did not render the markdown inside of the html tags correctly, as in [here][collapse-render].
+To resolve, I installed the CommonMarkGhPages by adding `gem 'jekyll-commonmark-ghpages'` to the `jekyll_plugins group` in my `Gemfile`:
+```
+# jekyll-commonmark-ghpages added to collapse code snippet
+group :jekyll_plugins do
+  ...
+  gem 'jekyll-commonmark-ghpages'
+end
+```
+
+I then run `bundle install` to install the dependencies.
+
+
+The collapsible section are written as follow
+{% highlight html %}
+
+<details><summary>
+
+`code snippet need newline before` (click to expand)
+</summary>
+<p>
+
+```golang
+func main() {
+    code snippet in go
+}
+```
+</p>
+</details>
+{% endhighlight %}
+
+
 [jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
+[jekyll-gh]: https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
+[local-address]: localhost:4000
+
+[collapsible-markdown]: https://gist.github.com/joyrexus/16041f2426450e73f5df9391f7f7ae5f
+[collapse-render]: https://stackoverflow.com/questions/52944720/content-of-collapsible-sections-detailssummary-renders-markdown-in-gith

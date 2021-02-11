@@ -38,3 +38,9 @@ In case some files are added incorrectly, you can "unstage" the file so that it 
 `git commit -m "Some changes I made"` commits the changes that were previously added with the message given after -m (if no message is given a window will open to ask for it) 
 
 `git push` will push the modification to the remote repository
+
+# Branches
+To create a new branch: 
+```sh
+git checkout -b <newBranchName>
+```

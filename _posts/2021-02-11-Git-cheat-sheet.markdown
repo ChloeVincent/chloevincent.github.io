@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Git: Cheat Sheet for git commands"
-date:   2021-02-11 19:00:00 +0100
+date:   2021-02-11 12:00:00 +0100
 categories: git
 ---
 
@@ -10,14 +10,14 @@ In this post I compile useful commands for using git.
 # Initialize a new repo
 
 In a new repository: 
-```
+```sh
 git init
 git remote add origin https://github.com/<userName>/<repoName>.git
 # for instance: 
 #git remote add origin https://github.com/ChloeVincent/French-new-quotatives.git
 ```
 After some local changes: 
-```
+```sh
 git commit -m "Initial commit"
 git push -u origin main
 ```

@@ -71,8 +71,9 @@ In order to debug the built app, I used a [file writer][bufio-doc]. This is a te
 The code is copied from the [Google Calendar documentation][calendar-doc]. 
 I only extracted the function `startCalendarService()` for more readability, and the `calendarService` so that it is accessible from the handler.
 
-On the first access, the application guides the user to allow access to the chosen calendar.
 A credential file and a token file are necessary for the app to work. 
+The credential file can be access by going to the [Google Calendar documentation][calendar-doc].
+On the first access, the application guides the user to allow access to the chosen calendar to download the token file.
 Once those files are obtained, there is no need to download them again.
 
 

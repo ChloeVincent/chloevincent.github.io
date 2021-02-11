@@ -21,7 +21,7 @@
 title: Chloe's blog
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  How to do stuff I spent some time doing myself, e.g. chloe-django-blog.appspot.com
+  How to do stuff I spent some time doing myself, e.g. R, go, git, django
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: chloe_vincent_

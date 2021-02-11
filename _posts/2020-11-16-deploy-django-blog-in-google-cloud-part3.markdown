@@ -8,6 +8,9 @@ categories: django python Gcloud Google Cloud
 
 My website is now up and running on [chloe-django-blog.nw.r.appspot.com][mywebsite].
 
+EDIT: the blog hosted on Google Cloud is not working since the free trial ended and the SQL database has been stopped. 
+The same blog is available at [chloevincent.pythonanywhere.com][cv-pa].
+
 I would now like to deploy from Github. But first I need to resolve some issues:
 
 
@@ -52,3 +55,4 @@ Deploying from Github will be the next step and I will change this post accordin
 [gcloud-sdk-install]:https://cloud.google.com/sdk/docs/install#deb
 [so-pkg-resource-version-error]:https://stackoverflow.com/questions/39577984/what-is-pkg-resources-0-0-0-in-output-of-pip-freeze-command
 [mywebsite]:https://chloe-django-blog.nw.r.appspot.com/
+[cv-pa]:http://chloevincent.pythonanywhere.com/

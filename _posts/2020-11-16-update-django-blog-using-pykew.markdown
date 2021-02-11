@@ -45,7 +45,11 @@ python manage.py collectstatic
 ```
 The regional version of my website was updated immediately ([the one with nw.r][myregional-website]) but I needed to wait a few minutes for the global one to update ([chloe-django-blog.appspot.com][mywebsite]).
 
+EDIT: the blog hosted on Google Cloud are not working since the free trial ended and the SQL database has been stopped. 
+The same blog is available at [chloevincent.pythonanywhere.com][cv-pa].
+
 
 
 [mywebsite]:https://chloe-django-blog.appspot.com/
 [myregional-website]:https://chloe-django-blog.nw.r.appspot.com/
+[cv-pa]:http://chloevincent.pythonanywhere.com/

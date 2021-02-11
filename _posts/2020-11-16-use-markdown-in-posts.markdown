@@ -35,6 +35,7 @@ And finally, wherever I use the text from my posts, I need to load the `markdown
 
 ```
 
-[mywebsite]:https://chloe-django-blog.appspot.com/
-[myregional-website]:https://chloe-django-blog.nw.r.appspot.com/
+The result is visible in the blog posts of [chloevincent.pythonanywhere.com][mywebsite].
+
+[mywebsite]:https://chloevincent.pythonanywhere.com
 [so-markdown]:https://stackoverflow.com/questions/23031406/how-do-i-implement-markdown-in-django-1-6-app

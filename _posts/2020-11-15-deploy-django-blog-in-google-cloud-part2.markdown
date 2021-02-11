@@ -166,8 +166,12 @@ To sum up: Django version 2.1.17 result in the `decode` error, while the latest 
 
 [https://chloe-django-blog.nw.r.appspot.com/][mywebsite]
 
+EDIT: the blog hosted on Google Cloud is not working since the free trial ended and the SQL database has been stopped. 
+The same blog is available at [chloevincent.pythonanywhere.com][cv-pa].
+
 
 [bennett-garner]: https://medium.com/@BennettGarner/deploying-a-django-application-to-google-app-engine-f9c91a30bd35
 [gcloud-sdk-install]:https://cloud.google.com/sdk/docs/install#deb
 [so-pkg-resource-version-error]:https://stackoverflow.com/questions/39577984/what-is-pkg-resources-0-0-0-in-output-of-pip-freeze-command
 [mywebsite]:https://chloe-django-blog.nw.r.appspot.com/
+[cv-pa]:http://chloevincent.pythonanywhere.com/

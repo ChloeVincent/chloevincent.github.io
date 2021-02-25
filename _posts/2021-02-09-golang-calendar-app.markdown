@@ -10,6 +10,11 @@ The working app is available on [my GitHub page][github]. I detail here the diff
 # Notes on building the app
 First set `GOPATH` to the working directory (for the terminal session) by running the following command to avoid errors about not finding the packages: `export GOPATH=<working directory>`.
 
+EDIT: it is actually better to add packages to GOPATH location directly instead of having packages in the working directory.
+To know where the GOPATH points run `echo $GOPATH`.
+It is defined in `home\.bashrc` in case you want to modify it.
+After that no need to export GOPATH everytime.
+
 To run the app locally, use `go run appli.go`.
 
 To build an executable use `go build appli.go`. 

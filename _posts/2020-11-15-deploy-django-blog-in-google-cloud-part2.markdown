@@ -10,7 +10,7 @@ After migrating my database to Google Cloud SQL, I now want to deploy my local D
 I am still following the blog post of [Bennett Garner][bennett-garner]. 
 
 
-Before using `gscloud app deploy`, I need to modify a few files. 
+Before using `gcloud app deploy`, I need to modify a few files. 
 
 The following is just copy-pasted from [Bennett Garner][bennett-garner] medium page.
 
@@ -125,7 +125,7 @@ gcloud app deploy
 
 THANK YOU BENNETT !
 
-Since I haven't downloaded the Google Cloud SDK (event when I was told I should - but I don't like to do unecessary stuff - keep it simple !), I do that now. 
+Since I haven't downloaded the Google Cloud SDK (even when I was told I should - but I don't like to do unecessary stuff - keep it simple !), I do that now. 
 
 ### Install Google Cloud SDK
 I followed the [Google Cloud SDK documentation][gcloud-sdk-install], didn't run into any errors, yay!

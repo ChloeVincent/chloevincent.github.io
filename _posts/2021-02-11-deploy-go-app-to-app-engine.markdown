@@ -406,6 +406,21 @@ func initializeStateString(){
 ```
 </p></details>
 
+# Add favicon handler
+<details><summary>
+
+`faviconHandler` (Click to expand) in needed, otherwise when the browser asks for the favicon, the regular `handler` is called. 
+</summary>
+<p>
+
+```golang
+func faviconHandler(w http.ResponseWriter, r *http.Request) {
+   http.ServeFile(w, r, "favicon.ico")
+}
+
+    http.HandleFunc("/favicon.ico", faviconHandler)
+```
+</p></details>
 
 # Avoid reconnecting everyday
 In order to avoid reauthentication for every session, I decided to store tokens in cookies.
@@ -413,6 +428,25 @@ This is to be avoided!
 Only the access token should be stored in cookies, the refresh token should be stored in a database. 
 Given that I don't want a database for the few users I will have (literally 3 or 4), I store the token in cookies. 
 If my user access the app from a common computer, anyone will be able to access the calendar events of the authenticated user, which is wrong!
+
+This approach did work in localhost when adding the [AuthCodeOption][aco-doc] AccessTypeOffline to the exchange of the authentication code for a token.
+However, when deployed, this is not a viable option, since the refresh token is only sent once on the first permission authorisation for the API. 
+It is resend if we go to our google account and revoke the authorisation.
+By design, I thus need to store the refresh token on my server, which will be better in terms of security so yay !
+
+I use file storage on the cloud ([upload][cloudstorageUp-doc] and [download][cloudstorageDown-doc]) to save my refresh token. 
+
+In order to run the app locally I need to register credential locally as described [here][authService-doc] and the bucket name (which I define in app.yaml for appengine) where the files are stored.
+The [bucket][cloudstorage-doc] is created automatically by appengine.
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS="/home/user/Downloads/<my-key>.json"
+export BUCKET_NAME="<project-name>.appspot.com"
+```
+
+For some reason (potentially a security breach?) I can use the same refresh token for multiple accounts.
+
+
 
 
 [ae-doc]: https://cloud.google.com/appengine/docs/standard/go/quickstart
@@ -435,3 +469,8 @@ If my user access the app from a common computer, anyone will be able to access 
 [csrf-wiki]:https://en.wikipedia.org/wiki/Cross-site_request_forgery
 [csrf-oauth2]:https://tools.ietf.org/html/rfc6749#section-10.12
 [map-const]:https://qvault.io/2019/10/21/golang-constant-maps-slices/
+[aco-doc]:https://pkg.go.dev/golang.org/x/oauth2#AuthCodeOption
+[cloudstorageUp-doc]:https://cloud.google.com/storage/docs/uploading-objects#storage-upload-object-go
+[cloudstorageDown-doc]:https://cloud.google.com/storage/docs/downloading-objects#storage-download-object-go
+[authService-doc]:https://cloud.google.com/docs/authentication/production#auth-cloud-implicit-go
+[cloudstorage-doc]:https://cloud.google.com/appengine/docs/standard/go/using-cloud-storage

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Git: Cheat Sheet for command lines"
+title:  "Terminal: Cheat Sheet for command lines"
 date:   2021-03-07 12:00:00 +0100
 categories: terminal bash shell
 ---

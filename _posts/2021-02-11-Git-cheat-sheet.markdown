@@ -35,7 +35,8 @@ When working on a project, usual commands are `git pull` to pull any changes fro
 
 In case some files are added incorrectly, you can "unstage" the file so that it won't be in the next commit with the command `git restore --stagged <file>`. Be careful `git restore <file>` on an unstaged file (=before add) will restore it to the previous added version.
 
-`git commit -m "Some changes I made"` commits the changes that were previously added with the message given after -m (if no message is given a window will open to ask for it) 
+`git commit -m "Some changes I made"` commits the changes that were previously added with the message given after -m (if no message is given a window will open to ask for it). 
+Use `-a` to automatically add the changes on files already in git.
 
 `git push` will push the modification to the remote repository
 

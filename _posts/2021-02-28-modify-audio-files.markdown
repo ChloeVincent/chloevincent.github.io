@@ -87,6 +87,17 @@ ffmpeg -i BoxingInEnglish2.mp4 -vf subtitles=EP2.srt:force_style='Fontsize=30' -
 
 ```
 
+#### Edit final command for better quality
+Following a [thread of Stack Exchange][subtitle-quality-se], I changed all the encoding commands by `-crf 18 -c:a copy`.
+The quality of the video is preserved and it seems that it works for instagram story! 
+So the final command is : 
+
+
+```
+ffmpeg -i BoxingInEnglish3.mp4 -vf subtitles=BoxingInEnglish3.srt:force_style='Fontsize=30' -crf 18 -c:a copy -ss 00:03:00 -t 00:01:00 BIE3-4.mp4
+```
+
+Actually not great in Instagram ...
 
 
 [trim-doc]: https://ottverse.com/trim-cut-video-using-start-endtime-reencoding-ffmpeg/
@@ -94,5 +105,5 @@ ffmpeg -i BoxingInEnglish2.mp4 -vf subtitles=EP2.srt:force_style='Fontsize=30' -
 [ffmpeg-subtitles]: https://trac.ffmpeg.org/wiki/HowToBurnSubtitlesIntoVideo
 [srt-format]:https://en.wikipedia.org/wiki/SubRip#Formatting
 [planet-citizens]: https://www.instagram.com/planet_citizens/
-
+[subtitle-quality-se]:https://video.stackexchange.com/questions/17548/loss-of-quality-while-adding-subtitle-via-ffmpeg
 
